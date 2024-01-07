@@ -1,4 +1,4 @@
-package gmail.umarosman77.POS;
+package gmail.umarosman77.pos;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
