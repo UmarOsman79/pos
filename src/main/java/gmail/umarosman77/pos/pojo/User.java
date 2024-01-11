@@ -17,6 +17,7 @@ public class User {
 	private String surname;
 	private LocalDate joinDate;
 	private ContactDetails contactDetails;
+	private boolean status;
 
 	@Getter
 	enum Role {
