@@ -1,4 +1,6 @@
 package gmail.umarosman77.pos.service.impl;
 
-public class LoginServiceImpl {
+import gmail.umarosman77.pos.service.LoginService;
+
+public class LoginServiceImpl implements LoginService {
 }
