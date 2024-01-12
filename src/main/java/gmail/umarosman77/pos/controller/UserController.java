@@ -1,7 +1,10 @@
 package gmail.umarosman77.pos.controller;
 
 import gmail.umarosman77.pos.pojo.User;
+import gmail.umarosman77.pos.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,5 +17,5 @@ public interface UserController {
 
 	@PostMapping
 	@ResponseStatus(HttpStatus.OK)
-	void add(@RequestBody User user);
+	ResponseEntity<User> add(@RequestBody User user);
 }
