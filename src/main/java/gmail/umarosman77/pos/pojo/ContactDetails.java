@@ -31,7 +31,7 @@ public class ContactDetails {
 					return contactType;
 				}
 			}
-			throw new IllegalArgumentException("Invalid color value: " + value);
+			throw new IllegalArgumentException("Invalid contact value: " + value);
 		}
 	}
 }

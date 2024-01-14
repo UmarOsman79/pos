@@ -18,4 +18,9 @@ public class UserControllerImpl implements UserController {
 	public ResponseEntity<User> add(User user) {
 		return new ResponseEntity<>(userService.addUser(user), HttpStatus.CREATED);
 	}
+
+	@Override
+	public ResponseEntity<User> get(Long id) {
+		return new ResponseEntity<>(userService.getUser(id), HttpStatus.OK);
+	}
 }

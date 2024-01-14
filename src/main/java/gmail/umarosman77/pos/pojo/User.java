@@ -5,7 +5,6 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.extern.jackson.Jacksonized;
 
 import java.time.LocalDate;
 
@@ -14,13 +13,15 @@ import java.time.LocalDate;
 @AllArgsConstructor
 public class User {
 	private Long id;
-	private Role role;
+	@JsonProperty("role")
+	private Role roleEnum;
 	private String name;
 	private String surname;
 	@JsonProperty(value = "join_date")
-	private LocalDate joinDate;
-	@JsonProperty(value = "contact_details")
-	private ContactDetails contactDetails;
+	private LocalDate joinDate = LocalDate.now();
+	//TODO Umar Uncomment when ready to work on contactDetails
+//	@JsonProperty(value = "contact_details")
+//	private ContactDetails contactDetails;
 	private boolean status;
 
 	@Getter
@@ -45,7 +46,7 @@ public class User {
 					return role;
 				}
 			}
-			throw new IllegalArgumentException("Invalid color value: " + value);
+			throw new IllegalArgumentException("Invalid role value: " + value);
 		}
 	}
 }

@@ -5,4 +5,6 @@ import gmail.umarosman77.pos.pojo.User;
 public interface UserService {
 
 	User addUser(User user);
+
+	User getUser(Long id);
 }
