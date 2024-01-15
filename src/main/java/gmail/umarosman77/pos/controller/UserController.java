@@ -16,6 +16,7 @@ public interface UserController {
 	@GetMapping
 	ResponseEntity<User> get(@RequestParam(value = "id") Long id);
 
+	//TODO Umar - Research if should change request param to path variable
 	@PutMapping(path = "/disable")
 	ResponseEntity<User> disableUser(@RequestParam(value = "id") Long id);
 }
