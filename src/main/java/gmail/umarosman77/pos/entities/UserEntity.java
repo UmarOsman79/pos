@@ -26,6 +26,8 @@ public class UserEntity {
 	@Column(name = "name")
 	private String name;
 	private String surname;
+
+	@Column(name = "join_date")
 	private LocalDate joinDate;
 	private boolean status;
 	//TODO Umar Uncomment when ready to work on contactDetails
