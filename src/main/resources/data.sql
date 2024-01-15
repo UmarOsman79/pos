@@ -1,4 +1,4 @@
-create sequence user_seq;
+create sequence user_seq MINVALUE 1 MAXVALUE 999999999 INCREMENT BY 1;
 
 CREATE TABLE user (
     id IDENTITY PRIMARY KEY,

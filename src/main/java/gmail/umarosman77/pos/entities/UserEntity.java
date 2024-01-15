@@ -14,7 +14,7 @@ public class UserEntity {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	@SequenceGenerator(initialValue = 1, name = "user_seq", allocationSize = 50)
+	@SequenceGenerator(name = "user_seq", allocationSize = 1)
 	private Long id;
 
 	@Basic
@@ -27,9 +27,9 @@ public class UserEntity {
 	private String name;
 	private String surname;
 	private LocalDate joinDate;
+	private boolean status;
 	//TODO Umar Uncomment when ready to work on contactDetails
 //	private ContactDetails contactDetails;
-	private boolean status;
 
 	@PostLoad
 	void fillTransient() {
