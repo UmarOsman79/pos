@@ -15,4 +15,7 @@ public interface UserController {
 
 	@GetMapping
 	ResponseEntity<User> get(@RequestParam(value = "id") Long id);
+
+	@PutMapping(path = "/disable")
+	ResponseEntity<User> disableUser(@RequestParam(value = "id") Long id);
 }

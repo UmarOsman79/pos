@@ -7,4 +7,6 @@ public interface UserService {
 	User addUser(User user);
 
 	User getUser(Long id);
+
+	User disableUser(Long id);
 }

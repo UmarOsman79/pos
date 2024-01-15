@@ -28,4 +28,10 @@ public class UserServiceImpl implements UserService {
 		UserEntity userEntity = userRepository.getReferenceById(id);
 		return modelMapper.map(userEntity, User.class);
 	}
+
+	@Override
+	public User disableUser(Long id) {
+		//TODO Umar - Implement method
+		return null;
+	}
 }

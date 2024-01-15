@@ -23,4 +23,9 @@ public class UserControllerImpl implements UserController {
 	public ResponseEntity<User> get(Long id) {
 		return new ResponseEntity<>(userService.getUser(id), HttpStatus.OK);
 	}
+
+	@Override
+	public ResponseEntity<User> disableUser(Long id) {
+		return new ResponseEntity<>(userService.disableUser(id), HttpStatus.OK);
+	}
 }
